@@ -1,4 +1,14 @@
 window.addEventListener('DOMContentLoaded', () => {
-    console.log('start')
+    const swiper = new Swiper('.swiper', {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: 1.5,
+        spaceBetween: 30,
+        initialSlide:1,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false
+        }
+      });
 })
 
