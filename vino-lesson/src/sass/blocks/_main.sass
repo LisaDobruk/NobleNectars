@@ -6,15 +6,29 @@
         object-fit: cover
 .promo
     margin-top: -90px
+    @include xxs
+        margin-top: -40px
     &__wrap
         display: flex
         align-items: stretch
         justify-content: flex-end
+        @include xs
+            flex-direction: column
+            align-items: flex-end
+            gap: 100px
+        @include xxs
+            gap: 70px
     &__info
         margin-right: 30px
         flex: 0 0 380px
+        @include xs
+            max-width: 444px
     &__img
         flex: 0 1 482px
+        @include xs
+            max-height: 576px
+        @include xxs
+            max-height: 360px
         img
             height: 100%
             object-fit: cover
@@ -25,9 +39,25 @@
         padding-left: 100px
         grid-template-columns: repeat(3, 1fr)
         gap: 132px
+        @include xs
+            display: flex
+            flex-direction: column
+            gap: 100px
+        @include xxs
+            padding: 0 40px 0 40px
+            gap: 70px
     &__item
+        @include xxs
+            display: flex
+            flex-direction: column-reverse
         &_revers
             padding-top: 60px
+            @include xs
+                padding-top: 0
+                margin-left: auto
+            @include xxs
+                flex-direction: column
+                margin-left: 0
     &__name
         position: relative
         margin-left: -100px
@@ -37,21 +67,40 @@
         font-size: 70px
         line-height: 100%
         text-align: center
+        @include xxs
+            margin-left: 0
+            margin-top: 0
+            margin-bottom: -15px
+            font-size: 32px
         &_bottom
             margin-top: 0
             margin-bottom: -37px
+            @include xxs
+                margin-bottom: -15px
     &__img
         img
             width: 100%
             object-fit: cover
+            @include xs
+                max-width: 278px
 
 .tradition
     background: $main-color
     padding-bottom: 342px
+    @include sm
+        padding-bottom: 614px
+    @include xxs
+        padding-bottom: 140px
     &__wrap
         display: flex
         justify-content: space-between
         align-items: flex-start
+        @include sm
+            flex-direction: column
+            align-items: flex-end
+            gap: 100px
+        @include xxs
+            gap: 70px
     &__left
         margin-right: 132px
         position: relative
@@ -60,13 +109,22 @@
         flex-direction: column
         @include md
             padding-left: 20px
+        @include sm
+            margin-right: 0
+            padding-right: 20px
         @include xxs
             padding-left: 15px
+            padding-right: 15px
     &__left-content
-        width: 688px
+        max-width: 688px
+        @include xs
+            max-width: 728px
     &__right
         @media(min-width: 1920px)
             margin-right: calc( (100% - 1900px) / 2)
+        @include xxs
+            padding-left: 15px
+            padding-right: 20px
     &__text
         margin-left: auto
     &__bottom
@@ -79,6 +137,12 @@
         right: 0
         bottom: -120px
         transform: translateY(100%)
+        @include sm
+            width: 100vw
+            bottom: -952px
+            height: 514px
+        @include xxs
+            display: none
         img
             width: 100%
             height: 100%
@@ -88,22 +152,46 @@
     @media(min-width: 1920px)
         padding-top: 610px
     padding-top: 510px
+    @include sm
+        padding-top: 200px
     &__title
         position: relative
     &__wrap
         display: flex
+        @include sm
+            flex-direction: column
     &__left
         margin-right: 30px
         display: flex
         flex-direction: column
         flex: 0 0 688px
+        @include xs
+            margin-right: 0px
+            flex: 0 0 979px
+        @include xxs
+            flex: 0 0 511px
     &__img
         width: 55%
         margin-left: auto
         margin-top: -200px
+        img
+                width: 100%
+                object-fit: cover
+        @include sm
+            margin-right: auto
+        @include xs
+            margin-top: -150px
+            width: 538px
+        @include xxs
+            margin-top: -80px
+            width: 290px
+            
+        
     &__right
         padding-top: 360px
         align-self: flex-end
+        @include sm
+            padding-top: 50px
 
 .story
     background: $main-color
